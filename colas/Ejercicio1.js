@@ -11,19 +11,22 @@
 // isEmpty --> Indica si la cola esta vacio o no
 
 class Queue {
+
   constructor() {
     this.items = {};
     this.front = 0;
-    this.rear = 0;
+    this.end = 0;
   }
 
+  // El metodo enqueue() recibe un valor y lo agrega al final de la cola rear--> trasero
   enqueue(element) {
-    this.items[this.rear] = element;
+    this.items[this.end] = element;
     this.rear++;
   }
 
+  // Metodo dequeue() Elimina el valor inicial de la cola y devuelve otro valor
   dequeue() {
-    if (this.front === this.rear) {
+    if (this.front === this.end) {
       //return null;
       return "La cola esta vacia";
     }
@@ -48,6 +51,7 @@ class Queue {
     }
   }
 
+  // Retorna el primer elemento de la cola
   peek() {
     if (this.getSize() === 0) {
       return "La cola esta vacia"; // o null
@@ -55,6 +59,7 @@ class Queue {
     return this.items[this.front];
   }
 
+  // Imprime la cola
   print() {
     if (this.getSize() === 0) {
       return "La cola esta vacia";

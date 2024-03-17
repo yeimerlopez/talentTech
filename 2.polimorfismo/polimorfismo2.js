@@ -1,7 +1,7 @@
 class Persona {
     constructor (nombre, edad){
         this._nombre = nombre;
-        this._edad = edad;
+        this._edad = edad; 
     }
 
     datos (){
@@ -19,7 +19,7 @@ class Profesor extends Persona {
         this._materia = materia;
     }
 
-    polimorfismo (){
+    ejmPolimorfismo (){
         return `${super.datos()} y dicto la materia ${this._materia}`
     }
 
@@ -32,7 +32,7 @@ class Estudiante extends Persona{
         this._grado = grado;
     }
 
-    polimorfismo (){
+    ejmPolimorfismo (){
         return ` ${super.datos()} y me encuentro en el grado ${this._grado}`
     }
 }
@@ -40,9 +40,9 @@ class Estudiante extends Persona{
 // Instancia
 
 let profesor = new Profesor("Yeimer", 20, "Programacion");
-console.log(profesor.polimorfismo());
+console.log(profesor.ejmPolimorfismo());
 console.log(profesor);
 
 let estudiante = new Estudiante("Angel", 18, "Primero");
-console.log(estudiante.polimorfismo());
+console.log(estudiante.ejmPolimorfismo());
 console.log(estudiante);
