@@ -5,3 +5,5 @@ const impares = numeros.filter(num => {
 });
 
 console.log(impares)
+
+

@@ -16,7 +16,7 @@ console.log(ciudades);
 /**
  * Forma de crear un array con fill [Rellenar]
  * @param primerParametro  es el valor con el que quiero llenar el array
- * @param segundoParametro es el indice inicial 
+ * @param segundoParametro es el indice inicial
  * @param terceroParametro es el indice final recordarque es abierto a la derecha
  */
 
@@ -31,17 +31,21 @@ console.log(arrayPrueba.fill("amor", 2, 4));
 const ciudades2 = Array(5).fill("bogota");
 console.log(ciudades2);
 
+const fruits = ["apple", "banana", "orange", "pineapple"];
 
-const fruits = ['apple', 'banana', 'orange', 'pineapple']; 
+///*************  forEach  ******************
 
-fruits.forEach(function (item, index){
-    console.log(index, item);
+/** Como recorrer un array con forEach
+ * @param item es el elemento del array
+ * @param index es el indice del elemento del array*
+ */
+fruits.forEach(function (item, index) {
+  console.log(index, item);
 });
 
+//traer el primero y el ultimo elemento del array
 let firstElement = fruits[0];
-console.log(firstElement);
+console.log(`the first element is ${firstElement}`);
 
 let lastElement = fruits[fruits.length - 1];
-console.log(lastElement);
-
-
+console.log(`the last element is ${lastElement}`); 
